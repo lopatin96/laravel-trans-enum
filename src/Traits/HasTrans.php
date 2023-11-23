@@ -13,6 +13,6 @@ trait HasTrans
 
     public function getKey(): ?string
     {
-        return 'enums/' . u(class_basename(__CLASS__))->snake()->toString() . '.' . $this->value;
+        return 'enums/' . u(str_replace('_', '-', class_basename(__CLASS__)))->snake()->toString() . '.' . $this->value;
     }
 }
