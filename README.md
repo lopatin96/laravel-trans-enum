@@ -21,9 +21,12 @@ enum Smoking: string
 
 return [
 
-    'never' => 'Never',
-    'occasional' => 'Occasional smoker',
-    'often' => 'Often',
+    'never:title' => 'Never',
+    'never:description' => 'Some description for Never',
+
+    'occasional:title' => 'Occasional smoker',
+
+    'often:title' => 'Often',
 
 ];
 ```
@@ -43,5 +46,6 @@ enum Smoking: string
 
 ### Usage
 ```php
-echo Smoking::Never->trans();
+echo Smoking::Never->title();
+echo Smoking::Never->description();
 ```
