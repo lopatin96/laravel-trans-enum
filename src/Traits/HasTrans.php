@@ -8,15 +8,15 @@ trait HasTrans
 {
     public function title(array $replace = []): ?string
     {
-        return $this->trans($replace, 'title');
+        return $this->trans('title', $replace);
     }
 
     public function description(array $replace = []): ?string
     {
-        return $this->trans($replace, 'description');
+        return $this->trans('description', $replace);
     }
 
-    private function trans(array $replace = [], string $attribute): ?string
+    private function trans(string $attribute, array $replace = []): ?string
     {
         return trans($this->getKey($attribute), $replace);
     }
